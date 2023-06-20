@@ -27,3 +27,66 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* Solution */
+
+body {
+  display: flex;
+  flex-direction: column; /* need to change the flex-direction to push the footer down. */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.content {
+  display: flex;
+  flex:  1 1 0;
+}
+
+/* The sidebar is 300px wide (and it doesn't shrink). */
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  padding: 16px; /* he sidebar has 16px padding. */
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+/* links are size 24px, are white, and do not have the underline text decoration. */
+a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* The cards are arranged horizontally, but wrap to multiple lines when they run out of room on the page. */
+  padding: 32px; /* There is 32px padding around the 'cards' section. */ 
+}
+
+.card {
+  padding: 16px;
+  margin: 16px;
+  width: 300px; /* Make sure you define how much space the cards should take up, in order for `flex-wrap` to work as intended. */
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
