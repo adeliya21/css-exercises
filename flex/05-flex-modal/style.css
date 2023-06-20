@@ -70,8 +70,11 @@ button.cancel {
 
 /* Solution */
 
+/* separate !-icon from container */
 .modal {
   display: flex;
+
+  /* There is equal space on either side of the icon (the gaps between the icon and the edge of the card, and the icon and the text, are the same). */
   gap: 16px;
   padding: 16px;
   
@@ -82,10 +85,12 @@ button.cancel {
   flex-shrink: 0;
 }
 
+/* inside container, we have 4 elements: header, div=text, button=continue, button=cancel */
+
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* The close button is vertically aligned with the header, and aligned in the top-right of the card. */
   margin-bottom: 16px;
 
   font-weight: bold;
