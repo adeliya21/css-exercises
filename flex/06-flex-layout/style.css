@@ -29,26 +29,28 @@ input {
 /* Solution */
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* header, content and footer are now placed vertically */
 }
 
 button {
   padding: 8px 16px;
 }
 
+/* Make the content a flex container, with flex-direction: column. Then set the content area to flex: 1, which is the shorthand for flex: 1 1 0 — the item can grow and shrink from a flex basis of 0. As this is the only item that can grow, it takes up all available space in the flex container and pushes the footer to the bottom. */
 .content {
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
+
+  /* to center */
   justify-content: center;
   align-items: center;
-  flex: 1 1 auto;
+  
 }
-
-
 
 .header, .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* The links in the header and footer are pushed to either side. */
   padding: 16px;
 }
 
@@ -57,18 +59,18 @@ button {
 }
 
 ul {
-  display: flex;
+  display: flex; /* to make row/horizontal */
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 
-  margin: 0;
-  padding: 0; 
+  margin: 0; /* because used to be a list in column */
+  padding: 0; /* because used to be a list in column */
 
-  list-style: none; /* remove bulletes */
+  list-style: none; /* remove bullets */
 }
 
 a {
-  text-decoration: none; /*remove underline */
+  text-decoration: none; /* remove underline */
   color: black;
 }
